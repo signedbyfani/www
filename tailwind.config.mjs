@@ -10,7 +10,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ["UncutSans", "ESRebondGrotesque", ...defaultTheme.fontFamily.sans],
-        serif: ["Lora", ...defaultTheme.fontFamily.serif],
         mono: ["GeistMono", ...defaultTheme.fontFamily.mono],
       },
     },
