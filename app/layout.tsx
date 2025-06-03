@@ -1,0 +1,42 @@
+import "./globals.css";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import { inter } from "./fonts";
+
+import { ThemeProvider } from "@/app/components/ThemeProvider";
+import Navigation from "@/app/components/Navigation";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://fanii.lol"),
+  title: "Fanindra Maharana",
+  description:
+    "Fanindra is an Interaction Designer based in India, specializing in UX Design, UX Research, Web Design and Framer. Open to design collaborations",
+  openGraph: {
+    title: "Fanindra Maharana",
+    url: "https://fanii.lol/",
+    images: [{ url: "https://fanii.lol/og.png", alt: "Fanindra Maharana" }],
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={inter.variable}>
+      <body className="width-full bg-contrast text-primary antialiased">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navigation />
+          <div className="mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+            {children}
+          </div>
+        </ThemeProvider>
+        <Analytics />
+      </body>
+    </html>
+  );
+}
