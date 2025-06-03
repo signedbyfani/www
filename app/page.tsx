@@ -76,8 +76,8 @@ export default function Home() {
         <h2 className="text-2xl font-semibold tracking-tight text-primary">Latest Blog Posts</h2>
 
           <p className="max-w-lg text-tertiary text-pretty">
-            I occasionally write about programming, productivity, and more.
-            Check me out and subscribe to stay up to date.
+            I occasionally write about design, productivity, philosophy and more.
+            Check out regularly to stay up to date.
           </p>
         </div>
         <PostList posts={blogs} />
