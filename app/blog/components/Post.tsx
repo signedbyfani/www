@@ -43,35 +43,10 @@ export default function Post({ post, mousePosition }: PostProps) {
               />
             </motion.div>
           )}
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
             <Section heading={formatDate(date)}>
               <span className="font-medium leading-tight text-pretty">{title}</span>
             </Section>
-            <div className="relative w-full aspect-[3/2] md:hidden rounded-md bg-secondary shadow-sm overflow-hidden">
-              {image ? (
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  className="object-cover"
-                />
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="h-6 w-6 text-secondary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
-                  />
-                </svg>
-              )}
-            </div>
           </div>
         </div>
       </Link>

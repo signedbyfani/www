@@ -52,7 +52,7 @@ export default function PostList({ posts }: PostListProps) {
     <ul
       ref={listRef}
       onMouseMove={(e) => handleMouseMove(e)}
-      className="flex flex-col animated-list gap-8 sm:gap-0"
+      className="flex flex-col animated-list gap-4 sm:gap-0"
     >
       {posts.length === 0 && <p>No posts found</p>}
       {posts.map((post) => (
