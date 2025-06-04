@@ -45,7 +45,7 @@ export default function VisualFeed() {
       </div>
 
       <div 
-        className="mt-4 columns-1 gap-6 animate-in sm:columns-2 lg:columns-4 xl:columns-3"
+        className="mt-4 columns-1 max-w-none md:-ml-48 md:w-[calc(100%+384px)] gap-6 animate-in xl:columns-3"
         style={{ "--index": 2 } as React.CSSProperties}
 
       >
