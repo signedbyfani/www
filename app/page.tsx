@@ -75,8 +75,8 @@ export default function Home() {
         <div className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight text-primary">Latest Blog Posts</h2>
 
-          <p className="max-w-lg text-tertiary text-pretty">
-            I occasionally write about design, productivity, philosophy and more.
+          <p className="max-w-lg text-secondary text-pretty">
+            I occasionally write about me, design, philosophy and more.
             Check out regularly to stay up to date.
           </p>
         </div>
@@ -104,19 +104,27 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-4 sm:gap-8 sm:grid grid-cols-2">
-            <div className="flex flex-col gap-2 p-4 border border-secondary rounded-md bg-secondary">
+            <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
               <p className="my-0 text-secondary text-sm">What I&apos;m up to</p>
               <p className="my-0 text-primary">Pursuing M. Des at JKLU, Jaipur and doing some freelance gigs</p>
             </div>
-            <div className="flex flex-col gap-2 p-4 border border-secondary rounded-md bg-secondary">
+            <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
               <p className="my-0 text-secondary text-sm">What I love</p>
               <p className="my-0 text-primary">Food, maps, tech, oh! did I mention food, movies, and food ig</p>
             </div>
-            <div className="flex flex-col gap-2 p-4 border border-secondary rounded-md bg-secondary">
+            <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
               <p className="my-0 text-secondary text-sm">Currently obsessed with</p>
               <p className="my-0 text-primary">The last of us S02 and designing templates on Framer</p>
             </div>
+            
           </div>
+          <Link
+            className="flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
+            href="fanindra-resume.pdf"
+          >
+            Download my resume
+            <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
+          </Link>
           </div>
     </div>
   );

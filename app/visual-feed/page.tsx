@@ -8,6 +8,8 @@ interface MediaItem {
   src: string;
   type: "image" | "video";
   alt: string;
+  createdAt: number;
+  modifiedAt: number;
 }
 
 export default function VisualFeed() {
@@ -19,6 +21,8 @@ export default function VisualFeed() {
       try {
         const response = await fetch("/api/visual-feed");
         const data = await response.json();
+        // The API now returns pre-sorted data, but we could sort here if needed
+        // data.sort((a: MediaItem, b: MediaItem) => b.modifiedAt - a.modifiedAt);
         setMediaItems(data);
       } catch (error) {
         console.error("Error fetching media:", error);
@@ -39,7 +43,7 @@ export default function VisualFeed() {
             className="animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            A collection of moments captured through my lens
+            Here are some of my design explorations ranging from Graphic Desigm, Framer Websites, Course work iterations, and more.
           </p>
         </div>
       </div>
@@ -47,7 +51,6 @@ export default function VisualFeed() {
       <div 
         className="mt-4 columns-1 max-w-none md:-ml-48 md:w-[calc(100%+384px)] gap-6 animate-in xl:columns-3"
         style={{ "--index": 2 } as React.CSSProperties}
-
       >
         {mediaItems.map((item, index) => (
           <div key={index} className="mb-6 break-inside-avoid">

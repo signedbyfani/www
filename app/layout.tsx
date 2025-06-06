@@ -1,10 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { inter } from "./fonts";
+import { inter, geistMono } from "./fonts";
 
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import Navigation from "@/app/components/Navigation";
+import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fanii.lol"),
@@ -30,13 +31,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${geistMono.variable}`}>
       <body className="width-full bg-contrast text-primary antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation />
-          <div className="mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+          <div className="mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-24 md:pt-20">
             {children}
           </div>
+          <Footer />
         </ThemeProvider>
         <Analytics />
       </body>

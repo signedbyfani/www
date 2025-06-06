@@ -23,13 +23,18 @@ export async function GET() {
       .map(file => {
         const ext = path.extname(file).toLowerCase();
         const isVideo = SUPPORTED_VIDEO_EXTENSIONS.includes(ext);
+        const filePath = path.join(visualFeedDir, file);
+        const stats = fs.statSync(filePath);
         
         return {
           src: `/visual-feed/${file}`,
           type: isVideo ? "video" : "image",
-          alt: path.parse(file).name.replace(/-/g, " ")
+          alt: path.parse(file).name.replace(/-/g, " "),
+          createdAt: stats.birthtime.getTime(),
+          modifiedAt: stats.mtime.getTime()
         };
-      });
+      })
+      .sort((a, b) => b.modifiedAt - a.modifiedAt); // Sort by modification date in descending order
 
     return NextResponse.json(mediaItems);
   } catch (error) {

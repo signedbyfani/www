@@ -1,6 +1,7 @@
 import { allProjects } from ".contentlayer/generated";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import CustomImage from "@/app/blog/components/Image";
 import Avatar from "@/app/components/Avatar";
 import Link from "@/app/components/Link";
 import Mdx from "@/app/blog/components/MdxWrapper";
@@ -58,15 +59,25 @@ export default function Project({ params }: { params: any }) {
   return (
     <div className="flex flex-col gap-20">
       <article>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
           <div className="flex max-w-xl flex-col gap-4 text-pretty">
             <h1 className="text-3xl font-bold leading-tight tracking-tight text-primary">
               {project.title}
             </h1>
             <p className="text-secondary">{project.summary}</p>
           </div>
+          {project.image && (
+            <CustomImage
+              src={project.image}
+              alt={project.title}
+              width={1600}
+              height={900}
+              contained
+              size="lg"
+            />
+          )}
         </div>
-        <div className="h-16" />
+        <div className="h-8" />
         <div className="project prose prose-neutral">
           <Mdx code={project.body.code} />
         </div>
