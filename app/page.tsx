@@ -5,6 +5,9 @@ import { allProjects } from ".contentlayer/generated";
 import Link from "@/app/components/Link";
 import PostList from "@/app/blog/components/PostList";
 import ProjectList from "@/app/projects/components/ProjectList";
+import SkillsSlider from "@/app/components/SkillsSlider";
+import ImageSlider from "@/app/components/ImageSlider";
+import BreathingText from "@/app/components/breathing-text";
 
 export default function Home() {
   const blogs = allBlogs
@@ -20,14 +23,20 @@ export default function Home() {
     <div className="flex flex-col gap-16 md:gap-24">
       <div className="flex flex-col gap-8">
         <div className="space-y-4 align-center">
+
           <h1 className="animate-in text-center text-4xl font-bold tracking-tighter text-primary">
-            Hello. I&apos;m Fanindra, <br/> a Interaction Designer
+            Hello. I&apos;m Fanindra, <br/> an           <BreathingText
+          label="Interaction"
+          staggerDuration={0.1}
+          fromFontVariationSettings="'wght' 400, 'slnt' 0"
+          toFontVariationSettings="'wght' 900, 'slnt' -10"
+        /> Designer
           </h1>
           <p
             className="text-center text-lg animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            Designing for people, fast and steady
+            Designing for people - fast & steady
 
 
           </p>
@@ -103,6 +112,11 @@ export default function Home() {
               <b>Crafting experiences of how people interact with anything - it can be digital product, physical product, a space</b>
             </p>
           </div>
+          <div className="flex flex-col mt-2">
+             <h3 className="text-secondary text-sm">Things I specialize in - </h3>
+          <SkillsSlider /></div>
+
+         
           <div className="flex flex-col gap-4 sm:gap-8 sm:grid grid-cols-2">
             <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
               <p className="my-0 text-secondary text-sm">What I&apos;m up to</p>
@@ -114,10 +128,13 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
               <p className="my-0 text-secondary text-sm">Currently obsessed with</p>
-              <p className="my-0 text-primary">The last of us S02 and designing templates on Framer</p>
+              <p className="my-0 text-primary">The Last of Us S02 & Phineas and Ferb S05</p>
             </div>
-            
           </div>
+
+
+          <ImageSlider />
+
           <Link
             className="flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
             href="fanindra-resume.pdf"
