@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - bufferutil
+  - contentlayer
+  - esbuild
+  - protobufjs
+  - unrs-resolver
+  - utf-8-validate

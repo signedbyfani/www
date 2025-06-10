@@ -1,0 +1,77 @@
+---
+title: "Uberpool"
+date: "2025"
+summary: "Changing how people share their cabs on Uber with Dynamic Carpooling"
+image: "/projects/uberpool/cover.gif"
+---
+
+## Overview
+
+UberPool is great for efficiency but has a major drawback—riders must commit to carpooling before booking, which might not always align with their preferences.
+
+This case study presents a new feature: **Dynamic Carpooling**—a flexible way for users to choose carpooling after their ride has started. This enhances ride efficiency while keeping user preferences in mind.
+
+## The Problem
+
+Despite UberPool's existence, many users hesitate to opt in beforehand because:
+
+- They worry about potential delays due to additional pickups
+- They want a guaranteed ride first, and later decide if sharing is okay
+- Fixed carpool pricing upfront might not always be the best deal
+
+A more dynamic carpooling option allows flexibility, letting riders decide in real time
+
+## Design Solution
+
+#### User Flow
+
+<Image
+  src="/projects/uberpool/screen1.webp"
+  alt="Booking Phase"
+  width={2580}
+  height={1691}
+  caption="Booking Phase - Users toggle 'Open to Carpool?' before booking. No impact on their initial fare or ETA."
+  contained
+  size="lg"
+/>
+
+
+
+<Image
+  src="/projects/uberpool/screen2.webp"
+  alt="Screen 2"
+  width={2580}
+  height={1691}
+  caption="The ride begins as a private trip. If another rider enables carpooling and their route aligns, the system finds a match"
+  contained
+  size="lg"
+/>
+
+<Image
+  src="/projects/uberpool/screen3.webp"
+  alt="Screen 3"
+  width={2580}
+  height={1691}
+  caption="A push notification appears on their lock screen when there is a match. Riders can tap to open the
+Uber app and review details"
+  contained
+  size="lg"
+/>
+
+
+<Image
+  src="/projects/uberpool/screen4.webp"
+  alt="Screen 4"
+  width={2580}
+  height={1691}
+  caption="A popup prompts that someone is looking to share the ride. New fare after
+sharing is displayed. Accept and Decline buttons are shown to the user for quick decision making"
+  contained
+  size="lg"
+/>
+
+
+## Impact & Future Scope
+
+- **Better Ride Utilization** - Fewer empty seats mean more sustainable travel
+- **Cost Savings** - Riders get the flexibility to share rides when it's convenient
