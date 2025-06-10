@@ -47,7 +47,7 @@ export default function Home() {
         >
           <Magnetic>
             <Link
-              className="flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
+              className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
               href="mailto:imfanindra@gmail.com">
               Contact
               <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
@@ -56,7 +56,7 @@ export default function Home() {
           <Magnetic>
             <Link
               href="https://www.linkedin.com/in/fanindra-m/"
-              className="flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary">
+              className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary">
               LinkedIn
               <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
             </Link>
@@ -64,7 +64,7 @@ export default function Home() {
           <Magnetic>
             <Link
               href="https://www.behance.net/imfanindra"
-              className="flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary">
+              className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary">
               Behance
               <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
             </Link>
@@ -92,7 +92,7 @@ export default function Home() {
         <Magnetic>
             <Link
               href="/blog"
-              className="flex w-fit text-sm gap-2 items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
+              className="flex select-none w-fit text-sm gap-2 items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
             >
               Read all
               <ArrowTurnDownRightIcon className="h-4 w-4 text-secondary" />
@@ -140,7 +140,7 @@ export default function Home() {
 
         <Magnetic>
         <Link
-          className="flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
+          className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
           href="Fanindra_Resume.pdf"
         >
           Download my resume

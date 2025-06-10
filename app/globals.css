@@ -12,6 +12,14 @@
 @layer base {
   html {
     @apply font-medium;
+    
+    ::selection {
+      @apply bg-[#FF5849]/10 text-[#FF5849];
+    }
+    
+    ::-moz-selection {
+      @apply bg-[#FF5849]/10 text-[#FF5849];
+    }
   }
 
   :root {
