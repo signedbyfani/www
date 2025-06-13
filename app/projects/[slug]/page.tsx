@@ -59,17 +59,36 @@ export default function Project({ params }: { params: any }) {
   return (
     <div className="flex flex-col gap-20">
       <article>
-        <div className="flex flex-col gap-4">
-          <div className="flex max-w-xl flex-col gap-2 text-pretty">
-            <h1 className="animate-in text-3xl font-bold leading-tight tracking-tight text-primary">
-              {project.title}
-            </h1>
-            <p className="animate-in text-secondary" style={{ "--index": 1 } as React.CSSProperties}>
+        <div className="flex flex-col gap-8">
+          <div className="flex max-w-xl flex-col gap-4">
+            <div className="flex flex-col gap-2">
+
+              <p className="font-semibold text-lg text-primary animate-in" style={{ "--index": 0 } as React.CSSProperties}>{project.title} <span className="text-tertiary text-sm"> • {project.date}</span></p>
+
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary animate-in" style={{ "--index": 1 } as React.CSSProperties}>
+                {project.bigTitle || project.title}
+              </h1>
+            </div>
+            <p className="text-secondary animate-in" style={{ "--index": 2 } as React.CSSProperties}>
               {project.summary}
             </p>
+            <div className="flex flex-row gap-4 items-center text-sm text-tertiary animate-in" style={{ "--index": 3 } as React.CSSProperties}>
+            {project.category && (
+                  <div className="flex flex-wrap gap-2">
+                    {project.category.split(',').map((category, index) => (
+                      <span 
+                        key={index} 
+                        className="px-3 py-1 text-sm rounded-full bg-secondary border border-secondary text-secondary whitespace-nowrap select-none"
+                      >
+                        {category.trim()}
+                      </span>
+                    ))}
+                  </div>
+                )}
+            </div>
           </div>
           {project.image && (
-            <div className="animate-in" style={{ "--index": 2 } as React.CSSProperties}>
+            <div className="animate-in" style={{ "--index": 4 } as React.CSSProperties}>
               <CustomImage
                 src={project.image}
                 alt={project.title}
@@ -82,10 +101,10 @@ export default function Project({ params }: { params: any }) {
           )}
         </div>
         <div className="h-8" />
-        <div className="project prose prose-neutral mx-auto max-w-[900px] animate-in" style={{ "--index": 3 } as React.CSSProperties}>
+        <div className="project prose prose-neutral mx-auto max-w-[900px] animate-in" style={{ "--index": 5 } as React.CSSProperties}>
           <Mdx code={project.body.code} />
         </div>
-        <div className="animate-in" style={{ "--index": 4 } as React.CSSProperties}>
+        <div className="animate-in" style={{ "--index": 6 } as React.CSSProperties}>
           <ProjectNavigation projects={allProjects} />
         </div>
       </article>

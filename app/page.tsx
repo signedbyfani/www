@@ -28,8 +28,8 @@ export default function Home() {
             Hello. I&apos;m Fanindra, <br /> an           <BreathingText
               label="Interaction"
               staggerDuration={0.1}
-              fromFontVariationSettings="'wght' 400, 'slnt' 0"
-              toFontVariationSettings="'wght' 900, 'slnt' -10"
+              fromFontVariationSettings="'wght' 300, 'slnt' 0"
+              toFontVariationSettings="'wght' 900, 'slnt' 0"
             /> Designer
           </h1>
           <p
@@ -37,8 +37,6 @@ export default function Home() {
             style={{ "--index": 1 } as React.CSSProperties}
           >
             Designing for people - fast & steady
-
-
           </p>
         </div>
         <div
@@ -76,7 +74,7 @@ export default function Home() {
         className="flex animate-in flex-col gap-8"
         style={{ "--index": 4 } as React.CSSProperties}
       >
-        <h2 className="text-2xl font-semibold tracking-tight text-primary">Recent Projects</h2>
+        <h2 className="text-lg font-semibold tracking-tight uppercase text-tertiary">Recent Projects</h2>
         <ProjectList projects={projects} />
       </div>
 
@@ -138,15 +136,10 @@ export default function Home() {
         <ImageSlider />
 
 
-        <Magnetic>
-        <Link
-          className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
-          href="Fanindra_Resume.pdf"
-        >
-          Download my resume
-          <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
-        </Link>
-        </Magnetic>
+          <a href="Fanindra_Resume.pdf" target="_blank" className="flex flex-row gap-2 items-center px-3 py-2 bg-black w-fit text-white font-semibold text-md rounded-md border border-black bg-[linear-gradient(180deg,_#2D2D2D_1.06%,_#000_101.06%)] shadow-[142px_97px_48px_rgba(0,0,0,0),91px_62px_44px_rgba(0,0,0,0.01),51px_35px_37px_rgba(0,0,0,0.05),23px_16px_27px_rgba(0,0,0,0.09),6px_4px_15px_rgba(0,0,0,0.10)] hover:scale-95 transition-all duration-300">
+            Download my resume
+            <ArrowUpRightIcon className="h-4 w-4 text-white" />
+          </a>
 
 
       </div>

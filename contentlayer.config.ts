@@ -44,9 +44,11 @@ export const Project = defineDocumentType(() => ({
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
+    bigTitle: { type: "string", required: false },
     summary: { type: "string", required: true },
     date: { type: "string", required: true },
     image: { type: "string", required: false },
+    category: { type: "string", required: false },
   },
   computedFields: projectComputedFields,
 }));
