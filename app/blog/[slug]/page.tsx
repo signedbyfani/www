@@ -81,7 +81,7 @@ export default async function Blog({ params }: { params: any }) {
                 alt={`${blog.title} blog image`}
                 width={700}
                 height={350}
-                className="w-full max-w-none md:rounded-lg"
+                className="w-full max-w-none md:rounded-lg border border-secondary"
               />
             </div>
           </>
