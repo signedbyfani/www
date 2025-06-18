@@ -19,6 +19,11 @@ module.exports = {
         sans: ['var(--font-uncut-sans)'],
         mono: ['var(--font-geist-mono)'],
       },
+
+      colors: {
+        accent: "#008CFF",
+      },
+
       textColor: {
         primary: "var(--gray-12)",
         secondary: "var(--gray-11)",

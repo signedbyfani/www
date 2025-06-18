@@ -14,7 +14,7 @@
     @apply font-medium;
     
     ::selection {
-      @apply bg-[#FF5849]/10 text-[#FF5849];
+      @apply bg-accent/10 text-accent;
     }
     
     ::-moz-selection {

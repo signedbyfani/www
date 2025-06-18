@@ -29,7 +29,7 @@ export default function Home() {
               label="Interaction"
               staggerDuration={0.1}
               fromFontVariationSettings="'wght' 300, 'slnt' 0"
-              toFontVariationSettings="'wght' 900, 'slnt' 0"
+              toFontVariationSettings="'wght' 900, 'slnt' 0" className="p-1 text-accent rounded-md bg-accent/10"
             /> Designer
           </h1>
           <p
