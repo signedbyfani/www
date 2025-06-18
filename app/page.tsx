@@ -120,7 +120,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 sm:gap-8 sm:grid grid-cols-2">
           <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
             <p className="my-0 text-secondary text-sm">What I&apos;m up to</p>
-            <p className="my-0 text-primary">Pursuing M. Des at JKLU, Jaipur and doing some freelance gigs</p>
+            <p className="my-0 text-primary">Pursuing M. Des at JKLU, Jaipur and working on freelance design projects</p>
           </div>
           <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
             <p className="my-0 text-secondary text-sm">What I love</p>

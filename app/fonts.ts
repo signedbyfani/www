@@ -1,8 +1,8 @@
 import localFont from 'next/font/local';
 
-export const uncutSans = localFont({
-  src: '../public/UncutSans.woff2',
-  variable: '--font-uncut-sans',
+export const inter = localFont({
+  src: '../public/Inter.woff2',
+  variable: '--font-inter',
   display: 'swap',
 });
 

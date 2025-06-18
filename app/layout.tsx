@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { uncutSans, geistMono } from "./fonts";
+import { inter, geistMono } from "./fonts";
 
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${uncutSans.variable} ${geistMono.variable} light`}>
+    <html lang="en" className={`${inter.variable} ${geistMono.variable} light`}>
       <body className="width-full bg-contrast text-primary antialiased">
         <Navigation />
         <div className="mx-auto max-w-[900px] px-6 pb-24 pt-16 md:px-6 md:pb-24 md:pt-20">

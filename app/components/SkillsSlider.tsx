@@ -19,7 +19,7 @@ export default function SkillsSlider() {
   return (
     <div className="w-full overflow-visible select-none py-6">
       <InfiniteSlider 
-        speed={80}
+        speed={70}
         className="gap-8"
       >
         {skills.map((skill, index) => (

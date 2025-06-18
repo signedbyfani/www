@@ -12,6 +12,7 @@
 @layer base {
   html {
     @apply font-medium;
+    letter-spacing: -0.22px;
     
     ::selection {
       @apply bg-accent/10 text-accent;
