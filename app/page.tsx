@@ -1,3 +1,5 @@
+"use client";
+
 import { allBlogs } from ".contentlayer/generated";
 import { ArrowUpRightIcon, ArrowTurnDownRightIcon } from "@heroicons/react/20/solid";
 import { allProjects } from ".contentlayer/generated";
@@ -8,6 +10,7 @@ import ProjectList from "@/app/projects/components/ProjectList";
 import SkillsSlider from "@/app/components/SkillsSlider";
 import ImageSlider from "@/app/components/ImageSlider";
 import BreathingText from "@/app/components/breathing-text";
+import { useRef, useEffect } from "react";
 
 export default function Home() {
   const blogs = allBlogs
@@ -18,6 +21,14 @@ export default function Home() {
   const projects = allProjects.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 15;
+    }
+  }, []);
 
   return (
     <div className="flex flex-col gap-16 md:gap-24">
@@ -88,13 +99,13 @@ export default function Home() {
         <PostList posts={blogs} />
 
         <Magnetic>
-            <Link
-              href="/blog"
-              className="flex select-none w-fit text-sm gap-2 items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
-            >
-              Read all
-              <ArrowTurnDownRightIcon className="h-4 w-4 text-secondary" />
-            </Link></Magnetic>
+          <Link
+            href="/blog"
+            className="flex select-none w-fit text-sm gap-2 items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
+          >
+            Read all
+            <ArrowTurnDownRightIcon className="h-4 w-4 text-secondary" />
+          </Link></Magnetic>
 
       </div>
       <div id="about"
@@ -102,15 +113,18 @@ export default function Home() {
         style={{ "--index": 4 } as React.CSSProperties}
       >
         <h2 className="font-semibold text-2xl text-primary">About me</h2>
-        <div className="flex flex-col gap-2">
-          <p className="my-0 font-semibold tracking-tight text-primary text-lg">
-            Hello, I&apos;m Fanindra! I am Interaction Designer specialized in crafting seamless digital experiences for people.
-          </p>
-          <p className="my-0 text-secondary">
-            People keep asking me <b>what is Interaction Design?</b> Is it UI/UX? Is it Experience Design? Is it about creating animations or micro
-            interactions? Well, it is mix of all the above and basically →{" "}
-            <b>Crafting experiences of how people interact with anything - it can be digital product, physical product, a space</b>
-          </p>
+        <div className="flex flex-col">
+          <video
+            ref={videoRef}
+            src="/about.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="rounded-lg w-ful mx-auto my-4"
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className="flex flex-col mt-2">
           <h3 className="text-secondary text-sm">Things I specialize in - </h3>
@@ -131,15 +145,13 @@ export default function Home() {
             <p className="my-0 text-primary">The Last of Us S02 & Phineas and Ferb S05</p>
           </div>
         </div>
-
-
         <ImageSlider />
 
 
-          <a href="Fanindra_Resume.pdf" target="_blank" className="flex flex-row gap-2 items-center px-3 py-2 bg-black w-fit text-white font-semibold text-md rounded-md border border-black bg-[linear-gradient(180deg,_#2D2D2D_1.06%,_#000_101.06%)] shadow-[142px_97px_48px_rgba(0,0,0,0),91px_62px_44px_rgba(0,0,0,0.01),51px_35px_37px_rgba(0,0,0,0.05),23px_16px_27px_rgba(0,0,0,0.09),6px_4px_15px_rgba(0,0,0,0.10)] hover:scale-95 transition-all duration-300">
-            Download my resume
-            <ArrowUpRightIcon className="h-4 w-4 text-white" />
-          </a>
+        <a href="Fanindra_Resume.pdf" target="_blank" className="flex flex-row gap-2 items-center px-3 py-2 bg-black w-fit text-white font-semibold text-md rounded-md border border-black bg-[linear-gradient(180deg,_#2D2D2D_1.06%,_#000_101.06%)] shadow-[142px_97px_48px_rgba(0,0,0,0),91px_62px_44px_rgba(0,0,0,0.01),51px_35px_37px_rgba(0,0,0,0.05),23px_16px_27px_rgba(0,0,0,0.09),6px_4px_15px_rgba(0,0,0,0.10)] hover:scale-95 transition-all duration-300">
+          Download my resume
+          <ArrowUpRightIcon className="h-4 w-4 text-white" />
+        </a>
 
 
       </div>

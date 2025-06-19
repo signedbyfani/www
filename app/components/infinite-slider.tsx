@@ -1,5 +1,4 @@
 'use client';
-
 import { cn } from '@/app/_utils/cn';
 import { useMotionValue, animate, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
