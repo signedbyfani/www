@@ -85,18 +85,20 @@ input:-webkit-autofill:focus {
 }
 
 .overflow-x-scroll.snap-x::-webkit-scrollbar {
-  /* hide scrollbars with webkit scrollbar */
   display: none;
 }
 
-/* blog prose styles overrides */
 .prose hr {
   @apply border-primary;
 }
 
 .prose blockquote {
-  @apply border-l-2 border-primary font-mono;
+  @apply border-l-2 border-accent text-lg font-medium px-4 py-1 bg-accent/5 rounded-r-md;
   font-style: normal;
+}
+
+.prose blockquote strong {
+  @apply text-accent
 }
 
 .prose figcaption {

@@ -85,7 +85,7 @@ export default function Project({ params }: { params: any }) {
                 )}
             </div>
           </div>
-          {project.image && (
+          {project.image ? (
             <div className="animate-in" style={{ "--index": 4 } as React.CSSProperties}>
               <CustomImage
                 src={project.image}
@@ -93,10 +93,21 @@ export default function Project({ params }: { params: any }) {
                 width={1600}
                 height={900}
                 contained
-                size="lg"
+                size="base"
               />
             </div>
-          )}
+          ) : project.coverVideo ? (
+            <div className="animate-in" style={{ "--index": 4 } as React.CSSProperties}>
+              <video
+                src={project.coverVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-auto w-full overflow-hidden rounded-md border border-secondary bg-secondary md:rounded-lg"
+              />
+            </div>
+          ) : null}
         </div>
         <div className="h-8" />
         <div className="project prose prose-neutral mx-auto max-w-[900px] animate-in" style={{ "--index": 5 } as React.CSSProperties}>
