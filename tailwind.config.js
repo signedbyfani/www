@@ -16,8 +16,17 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-geist-mono)'],
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          'var(--font-inter)',
+          "sans-serif",
+        ],
+        mono: [
+          "Menlo",
+          'var(--font-geist-mono)',
+          "monospace",
+        ],
       },
 
       colors: {

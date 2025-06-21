@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "@/app/components/Link";
-import type { Blog } from ".contentlayer/generated";
+import type { Blog } from "contentlayer/generated";
 
 interface PostNavigationProps {
   posts: Array<Blog>;

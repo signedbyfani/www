@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "@/app/components/Link";
 import Section from "@/app/components/Section";
 import { formatDate } from "@/app/_utils/formatDate";
-import type { Blog } from ".contentlayer/generated";
+import type { Blog } from "contentlayer/generated";
 
 type PostProps = {
   post: Blog;

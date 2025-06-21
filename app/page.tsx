@@ -1,8 +1,6 @@
-"use client";
-
-import { allBlogs } from ".contentlayer/generated";
+import { allBlogs } from "contentlayer/generated";
 import { ArrowUpRightIcon, ArrowTurnDownRightIcon } from "@heroicons/react/20/solid";
-import { allProjects } from ".contentlayer/generated";
+import { allProjects } from "contentlayer/generated";
 import { Magnetic } from "@/app/components/Magnetic";
 import Link from "@/app/components/Link";
 import PostList from "@/app/blog/components/PostList";
@@ -10,7 +8,6 @@ import ProjectList from "@/app/projects/components/ProjectList";
 import SkillsSlider from "@/app/components/SkillsSlider";
 import ImageSlider from "@/app/components/ImageSlider";
 import BreathingText from "@/app/components/breathing-text";
-import { useRef, useEffect } from "react";
 
 export default function Home() {
   const blogs = allBlogs
@@ -21,14 +18,6 @@ export default function Home() {
   const projects = allProjects.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
-
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 15;
-    }
-  }, []);
 
   return (
     <div className="flex flex-col gap-16 md:gap-24">
@@ -114,17 +103,16 @@ export default function Home() {
       >
         <h2 className="font-semibold text-2xl text-primary">About me</h2>
         <div className="flex flex-col">
-          <video
-            ref={videoRef}
-            src="/about.webm"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="rounded-lg w-ful mx-auto my-4"
-          >
-            Your browser does not support the video tag.
-          </video>
+        <video
+      src="/about.webm"
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="rounded-lg w-full mx-auto my-4"
+    >
+      Your browser does not support the video tag.
+    </video>
         </div>
         <div className="flex flex-col mt-2">
           <h3 className="text-secondary text-sm">Things I specialize in - </h3>

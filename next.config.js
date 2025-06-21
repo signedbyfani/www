@@ -6,16 +6,43 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      "tailwindui.com",
-      "images.unsplash.com",
-      "cdn.dribbble.com",
-      "m.media-amazon.com",
-      "ik.imagekit.io",
-      "miro.medium.com",
-      "i.ytimg.com",
-      "store.storeimages.cdn-apple.com",
-      "www.apple.com",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.dribbble.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'miro.medium.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'store.storeimages.cdn-apple.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.apple.com',
+      },
     ],
   },
 };

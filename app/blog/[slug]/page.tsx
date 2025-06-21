@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { allBlogs } from ".contentlayer/generated";
+import { allBlogs } from "contentlayer/generated";
 
 import Mdx from "@/app/blog/components/MdxWrapper";
 import PostNavigation from "@/app/blog/components/PostNavigation";

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import type { Project } from ".contentlayer/generated";
+import type { Project } from "contentlayer/generated";
 import Link from "@/app/components/Link";
 
 type ProjectNavigationProps = {

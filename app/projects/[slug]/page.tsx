@@ -1,9 +1,7 @@
-import { allProjects } from ".contentlayer/generated";
+import { allProjects } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import CustomImage from "@/app/blog/components/Image";
-import Avatar from "@/app/components/Avatar";
-import Link from "@/app/components/Link";
 import Mdx from "@/app/blog/components/MdxWrapper";
 import ProjectNavigation from "@/app/projects/components/ProjectNavigation";
 
