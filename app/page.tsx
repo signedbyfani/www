@@ -1,5 +1,5 @@
 import { allBlogs } from "contentlayer/generated";
-import { ArrowUpRightIcon, ArrowTurnDownRightIcon } from "@heroicons/react/20/solid";
+import { ChevronRightIcon} from "@heroicons/react/20/solid";
 import { allProjects } from "contentlayer/generated";
 import { Magnetic } from "@/app/components/Magnetic";
 import Link from "@/app/components/Link";
@@ -8,6 +8,7 @@ import ProjectList from "@/app/projects/components/ProjectList";
 import SkillsSlider from "@/app/components/SkillsSlider";
 import ImageSlider from "@/app/components/ImageSlider";
 import BreathingText from "@/app/components/breathing-text";
+import { ButtonGooey } from "@/app/components/GooeyButton";
 
 export default function Home() {
   const blogs = allBlogs
@@ -43,30 +44,7 @@ export default function Home() {
           className="flex animate-in gap-3 text-sm justify-center"
           style={{ "--index": 2 } as React.CSSProperties}
         >
-          <Magnetic>
-            <Link
-              className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
-              href="mailto:imfanindra@gmail.com">
-              Contact
-              <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
-            </Link>
-          </Magnetic>
-          <Magnetic>
-            <Link
-              href="https://www.linkedin.com/in/fanindra-m/"
-              className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary">
-              LinkedIn
-              <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
-            </Link>
-          </Magnetic>
-          <Magnetic>
-            <Link
-              href="https://www.behance.net/imfanindra"
-              className="flex select-none w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary">
-              Behance
-              <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
-            </Link>
-          </Magnetic>
+          <ButtonGooey />
         </div>
       </div>
 
@@ -93,7 +71,7 @@ export default function Home() {
             className="flex select-none w-fit text-sm gap-2 items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
           >
             Read all
-            <ArrowTurnDownRightIcon className="h-4 w-4 text-secondary" />
+            <ChevronRightIcon className="h-4 w-4 text-primary" />
           </Link></Magnetic>
 
       </div>
@@ -136,9 +114,9 @@ export default function Home() {
         <ImageSlider />
 
 
-        <a href="Fanindra_Resume.pdf" target="_blank" className="flex flex-row gap-2 items-center px-3 py-2 bg-black w-fit text-white font-semibold text-md rounded-md border border-black bg-[linear-gradient(180deg,_#2D2D2D_1.06%,_#000_101.06%)] shadow-[142px_97px_48px_rgba(0,0,0,0),91px_62px_44px_rgba(0,0,0,0.01),51px_35px_37px_rgba(0,0,0,0.05),23px_16px_27px_rgba(0,0,0,0.09),6px_4px_15px_rgba(0,0,0,0.10)] hover:scale-95 transition-all duration-300">
+        <a href="Fanindra_Resume.pdf" target="_blank" className="flex flex-row gap-2 items-center px-4 py-3 bg-accent w-fit text-white font-semibold text-[1.125rem] rounded-lg hover:opacity-90 transition-all duration-300">
           Download my resume
-          <ArrowUpRightIcon className="h-4 w-4 text-white" />
+          <ChevronRightIcon className="h-6 w-6 text-white" />
         </a>
 
 
