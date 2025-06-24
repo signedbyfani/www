@@ -1,7 +1,6 @@
 import { allBlogs } from "contentlayer/generated";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { allProjects } from "contentlayer/generated";
-import { Magnetic } from "@/app/components/Magnetic";
 import Link from "@/app/components/Link";
 import PostList from "@/app/blog/components/PostList";
 import ProjectList from "@/app/projects/components/ProjectList";
@@ -62,14 +61,13 @@ export default function Home() {
         </div>
         <PostList posts={blogs} />
 
-        <Magnetic>
           <Link
             href="/blog"
             className="flex select-none w-fit text-sm gap-2 items-center rounded-md bg-tertiary px-3 py-2 no-underline hover:bg-accent hover:text-white"
           >
             Read all
             <ChevronRightIcon className="h-4 w-4" />
-          </Link></Magnetic>
+          </Link>
 
       </div>
       <div id="about"
@@ -78,9 +76,9 @@ export default function Home() {
       >
         <h2 className="font-semibold text-2xl text-primary">About me</h2>
         <div className="flex flex-col gap-2">
-          <h3 className="font-semibold text-lg ">Hey, I'm Fanindra Maharana, an Interaction Design student pursuing M. Des at JK Lakshmipat University. I'm into designing smooth and thoughful digital experiences for poeple.</h3>
+          <h3 className="font-semibold text-lg ">Hey, I&apos;m Fanindra Maharana, an Interaction Design student pursuing M. Des at JK Lakshmipat University. I&apos;m into designing smooth and thoughful digital experiences for poeple.</h3>
           <p>Funny how things work out, I did B. Tech in CSE (AI & ML), but design caught my interest during my second year of bachelors. I later wanted to pursue it full time.</p>
-          <p>Outside of design, I'm usually watching cricket, or watching movies or shows. I enjoy chatting about everything from maps, geo-politics, tech, AI, movies, cricket. Always up for a good conversation.</p>
+          <p>Outside of design, I&apos;m usually watching cricket, or watching movies or shows. I enjoy chatting about everything from maps, geo-politics, tech, AI, movies, cricket. Always up for a good conversation.</p>
           <h3 className="font-semibold text-lg ">Cheers!</h3>
         </div>
         <div className="flex flex-col gap-4 sm:gap-8 sm:grid grid-cols-2">
