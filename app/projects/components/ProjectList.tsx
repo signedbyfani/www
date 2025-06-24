@@ -16,12 +16,26 @@ export default function ProjectList({ projects }: ProjectListProps) {
           className="transition-opacity border-b border-primary pb-8"
         >
           <Link href={`/projects/${project.slug}`} className="flex flex-col gap-4">
-              <div className="flex flex-col gap-2 w-full">
-                <p className="font-semibold text-lg text-primary">{project.title} <span className="text-tertiary text-sm"> • {project.date}</span></p>
-                <p className="font-semibold text-2xl tracking-tight text-primary">{project.bigTitle}</p>
-              </div>
-              
-              <div className="aspect-[3/2] overflow-hidden rounded-md border border-secondary bg-secondary">
+
+            <div className="flex flex-col gap-2 w-full">
+              <p className="font-semibold text-xl text-secondary">{project.title} - <span className="text-primary tertiary">{project.bigTitle}</span></p>
+            </div>
+            <div className="flex flex-col gap-4 w-full">
+              {project.category && (
+                <div className="flex flex-wrap gap-2">
+                  {project.category.split(',').map((category, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-sm rounded-full bg-secondary border border-secondary text-secondary whitespace-nowrap"
+                    >
+                      {category.trim()}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="aspect-[3/2] overflow-hidden rounded-md border border-secondary bg-secondary">
               {project.image ? (
                 <Halo strength={10}>
                   <Image
@@ -59,23 +73,7 @@ export default function ProjectList({ projects }: ProjectListProps) {
                 </div>
               )}
             </div>
-
-
-              <div className="flex flex-col gap-4 w-full">
-              {project.category && (
-                  <div className="flex flex-wrap gap-2">
-                    {project.category.split(',').map((category, index) => (
-                      <span 
-                        key={index} 
-                        className="px-3 py-1 text-sm rounded-full bg-tertiary border border-primary text-secondary whitespace-nowrap"
-                      >
-                        {category.trim()}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                <p className="text-secondary text-base">{project.summary}</p>
-              </div></Link>
+          </Link>
 
         </li>
       ))}

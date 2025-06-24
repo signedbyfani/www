@@ -1,19 +1,16 @@
 import { allBlogs } from "contentlayer/generated";
-import { ChevronRightIcon} from "@heroicons/react/20/solid";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { allProjects } from "contentlayer/generated";
 import { Magnetic } from "@/app/components/Magnetic";
 import Link from "@/app/components/Link";
 import PostList from "@/app/blog/components/PostList";
 import ProjectList from "@/app/projects/components/ProjectList";
-import SkillsSlider from "@/app/components/SkillsSlider";
-import ImageSlider from "@/app/components/ImageSlider";
 import BreathingText from "@/app/components/breathing-text";
 import { ButtonGooey } from "@/app/components/GooeyButton";
 
 export default function Home() {
   const blogs = allBlogs
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    // 3 most recent
     .filter((_, i) => i < 3);
 
   const projects = allProjects.sort(
@@ -68,10 +65,10 @@ export default function Home() {
         <Magnetic>
           <Link
             href="/blog"
-            className="flex select-none w-fit text-sm gap-2 items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-tertiary"
+            className="flex select-none w-fit text-sm gap-2 items-center rounded-md bg-tertiary px-3 py-2 no-underline hover:bg-accent hover:text-white"
           >
             Read all
-            <ChevronRightIcon className="h-4 w-4 text-primary" />
+            <ChevronRightIcon className="h-4 w-4" />
           </Link></Magnetic>
 
       </div>
@@ -80,23 +77,12 @@ export default function Home() {
         style={{ "--index": 4 } as React.CSSProperties}
       >
         <h2 className="font-semibold text-2xl text-primary">About me</h2>
-        <div className="flex flex-col">
-        <video
-      src="/about.webm"
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="rounded-lg w-full mx-auto my-4"
-    >
-      Your browser does not support the video tag.
-    </video>
+        <div className="flex flex-col gap-2">
+          <h3 className="font-semibold text-lg ">Hey, I'm Fanindra Maharana, an Interaction Design student pursuing M. Des at JK Lakshmipat University. I'm into designing smooth and thoughful digital experiences for poeple.</h3>
+          <p>Funny how things work out, I did B. Tech in CSE (AI & ML), but design caught my interest during my second year of bachelors. I later wanted to pursue it full time.</p>
+          <p>Outside of design, I'm usually watching cricket, or watching movies or shows. I enjoy chatting about everything from maps, geo-politics, tech, AI, movies, cricket. Always up for a good conversation.</p>
+          <h3 className="font-semibold text-lg ">Cheers!</h3>
         </div>
-        <div className="flex flex-col mt-2">
-          <h3 className="text-secondary text-sm">Things I specialize in - </h3>
-          <SkillsSlider /></div>
-
-
         <div className="flex flex-col gap-4 sm:gap-8 sm:grid grid-cols-2">
           <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
             <p className="my-0 text-secondary text-sm">What I&apos;m up to</p>
@@ -111,9 +97,47 @@ export default function Home() {
             <p className="my-0 text-primary">The Last of Us S02 & Phineas and Ferb S05</p>
           </div>
         </div>
-        <ImageSlider />
-
-
+        <div className="flex flex-col mt-2">
+          <h3>Things I specialize in - </h3>
+          <div className="flex flex-row flex-wrap mt-4 gap-4 select-none cursor-pointer">
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              UX Design
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              UI Design
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              UX Research
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+            Prototyping
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              Design Systems
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              Wireframing
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              User Testing
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              Framer
+            </div>
+            <div
+              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
+              Webflow
+            </div>
+          </div>
+        </div>
         <a href="Fanindra_Resume.pdf" target="_blank" className="flex flex-row gap-2 items-center px-4 py-3 bg-accent w-fit text-white font-semibold text-[1.125rem] rounded-lg hover:opacity-90 transition-all duration-300">
           Download my resume
           <ChevronRightIcon className="h-6 w-6 text-white" />
