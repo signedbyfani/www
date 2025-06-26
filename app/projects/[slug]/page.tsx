@@ -96,17 +96,6 @@ export default function Project({ params }: { params: any }) {
                 size="base"
               />
             </div>
-          ) : project.coverVideo ? (
-            <div className="animate-in" style={{ "--index": 4 } as React.CSSProperties}>
-              <video
-                src={project.coverVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="h-auto w-full overflow-hidden rounded-md border border-secondary bg-secondary md:rounded-lg"
-              />
-            </div>
           ) : null}
         </div>
         <div className="h-8" />

@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 const links = [
   {
     path: "/",
-    title: "Home",
+    title: "Work",
   },
   {
-    path: '/#about',
+    path: '/about',
     title: "About",
   },
   {
@@ -19,8 +19,8 @@ const links = [
     title: "Blog",
   },
   {
-    path: "/visual-feed",
-    title: "Visual Feed",
+    path: "/#craft",
+    title: "Craft",
   },
 ] as const;
 

@@ -6,6 +6,8 @@ import PostList from "@/app/blog/components/PostList";
 import ProjectList from "@/app/projects/components/ProjectList";
 import BreathingText from "@/app/components/breathing-text";
 import { ButtonGooey } from "@/app/components/GooeyButton";
+import CraftImage from "@/app/components/CraftImage";
+import CraftVideo from "@/app/components/CraftVideo";
 
 export default function Home() {
   const blogs = allBlogs
@@ -18,7 +20,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-16 md:gap-24">
-      <div className="flex flex-col gap-8">
+
+      <section className="flex flex-col gap-8">
         <div className="space-y-4 align-center">
 
           <h1 className="animate-in sm:text-center text-4xl sm:text-5xl font-bold tracking-tighter text-primary">
@@ -42,17 +45,17 @@ export default function Home() {
         >
           <ButtonGooey />
         </div>
-      </div>
+      </section>
 
-      <div
-        className="flex animate-in flex-col gap-8"
-        style={{ "--index": 4 } as React.CSSProperties}
+      <section
+        className="flex animate-in flex-col gap-4"
+        style={{ "--index": 3 } as React.CSSProperties}
       >
-        <h2 className="text-lg font-semibold tracking-tight uppercase text-tertiary">Recent Projects</h2>
+        <h2 className="text-lg font-semibold tracking-tight uppercase text-tertiary">Featured Projects</h2>
         <ProjectList projects={projects} />
-      </div>
+      </section>
 
-      <div
+      <section
         className="flex animate-in flex-col gap-8"
         style={{ "--index": 4 } as React.CSSProperties}
       >
@@ -61,88 +64,76 @@ export default function Home() {
         </div>
         <PostList posts={blogs} />
 
-          <Link
-            href="/blog"
-            className="flex select-none w-fit text-sm gap-2 items-center rounded-md bg-tertiary px-3 py-2 no-underline hover:bg-accent hover:text-white"
-          >
-            Read all
-            <ChevronRightIcon className="h-4 w-4" />
-          </Link>
+        <Link
+          href="/blog"
+          className="flex select-none w-fit text-sm gap-2 items-center rounded-md bg-tertiary px-3 py-2 no-underline hover:bg-accent hover:text-white"
+        >
+          Read all
+          <ChevronRightIcon className="h-4 w-4" />
+        </Link>
 
-      </div>
-      <div id="about"
+      </section>
+
+      <section id="craft"
         className="flex animate-in flex-col gap-8"
-        style={{ "--index": 4 } as React.CSSProperties}
+        style={{ "--index": 5 } as React.CSSProperties}
       >
-        <h2 className="font-semibold text-2xl text-primary">About me</h2>
-        <div className="flex flex-col gap-2">
-          <h3 className="font-semibold text-lg ">Hey, I&apos;m Fanindra Maharana, an Interaction Design student pursuing M. Des at JK Lakshmipat University. I&apos;m into designing smooth and thoughful digital experiences for poeple.</h3>
-          <p>Funny how things work out, I did B. Tech in CSE (AI & ML), but design caught my interest during my second year of bachelors. I later wanted to pursue it full time.</p>
-          <p>Outside of design, I&apos;m usually watching cricket, or watching movies or shows. I enjoy chatting about everything from maps, geo-politics, tech, AI, movies, cricket. Always up for a good conversation.</p>
-          <h3 className="font-semibold text-lg ">Cheers!</h3>
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold tracking-tight text-primary">More Projects</h2>
+          <p className="text-secondary">Here are some of my other projects that I&apos;ve worked on, ranging from Multidisciplinary projects, Framer Websites, Course work iterations, and more.</p>
         </div>
-        <div className="flex flex-col gap-4 sm:gap-8 sm:grid grid-cols-2">
-          <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
-            <p className="my-0 text-secondary text-sm">What I&apos;m up to</p>
-            <p className="my-0 text-primary">Pursuing M. Des at JKLU, Jaipur and working on freelance design projects</p>
-          </div>
-          <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
-            <p className="my-0 text-secondary text-sm">What I love</p>
-            <p className="my-0 text-primary">Food, maps, tech, oh! did I mention food, movies, and food ig</p>
-          </div>
-          <div className="flex flex-col gap-2 p-4 border border-secondary rounded-lg bg-secondary">
-            <p className="my-0 text-secondary text-sm">Currently obsessed with</p>
-            <p className="my-0 text-primary">The Last of Us S02 & Phineas and Ferb S05</p>
-          </div>
-        </div>
-        <div className="flex flex-col mt-2">
-          <h3>Things I specialize in - </h3>
-          <div className="flex flex-row flex-wrap mt-4 gap-4 select-none cursor-pointer">
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              UX Design
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              UI Design
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              UX Research
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-            Prototyping
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              Design Systems
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              Wireframing
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              User Testing
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              Framer
-            </div>
-            <div
-              className="flex w-fit items-center justify-center bg-secondary border px-3 py-2 rounded-md text-sm transition-transform duration-300 ease-out hover:scale-95">
-              Webflow
-            </div>
-          </div>
-        </div>
-        <a href="Fanindra_Resume.pdf" target="_blank" className="flex flex-row gap-2 items-center px-4 py-3 bg-accent w-fit text-white font-semibold text-[1.125rem] rounded-lg hover:opacity-90 transition-all duration-300">
-          Download my resume
-          <ChevronRightIcon className="h-6 w-6 text-white" />
-        </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-8 animate-in" style={{ "--index": 6 } as React.CSSProperties}>
+          <CraftImage
+              imageSrc="/craft/crutch.webp"
+              name="Redesigned crutch tips for better functionality"
+              href="https://www.behance.net/gallery/222082189/Redesigning-Crutch-tips-for-better-functionality"
+            />
 
+            <CraftImage
+              imageSrc="/craft/Design Sphere.png"
+              name="Framer Portfolio Template"
+              href="https://www.framer.com/marketplace/templates/designsphere/"
+            />
+            <CraftImage
+              imageSrc="/craft/thathera.jpeg"
+              name="Documentation of Thathera craft of Jaipur"
+              href="https://heyzine.com/flip-book/39541d10be.html"
+            />
+            <CraftImage
+              imageSrc="/craft/jdw.png"
+              name="Jaipur Design Week 2025 Official Website"
+              href="https://scary-answers-416366.framer.app/"
+            />
+            <CraftImage
+              imageSrc="/craft/Learnuiux.png"
+              name="LearnUIUX Website redesign"
+              href="https://learnuiux-redesign.framer.website/"
+            />
+          </div>
+          <div className="space-y-8 animate-in" style={{ "--index": 7 } as React.CSSProperties}>
+          <CraftImage
+              imageSrc="/craft/Seating.jpeg"
+              name="Designed a seating space for IOD at JKLU"
+            />
 
-      </div>
+            <CraftImage
+              imageSrc="/craft/mental-health.png"
+              name="Helping people with their Mental Health"
+              href="https://www.behance.net/gallery/222100555/Mental-Health-Design-Process-Case-Study"
+            />
+            <CraftImage
+              imageSrc="/craft/Cred.gif"
+              name="Cred style button animation"
+            />
+            <CraftImage
+              imageSrc="/craft/WhatsApp.png"
+              name="WhatsApp Concept: Access previous chats on groups"
+            />
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

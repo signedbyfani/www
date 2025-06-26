@@ -48,7 +48,6 @@ export const Project = defineDocumentType(() => ({
     summary: { type: "string", required: true },
     date: { type: "string", required: true },
     image: { type: "string", required: false },
-    coverVideo: { type: "string", required: false },
     category: { type: "string", required: false },
   },
   computedFields: projectComputedFields,

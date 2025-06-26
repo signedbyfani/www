@@ -35,7 +35,7 @@ export default function ProjectList({ projects }: ProjectListProps) {
               )}
             </div>
 
-            <div className="aspect-[3/2] overflow-hidden rounded-md border border-secondary bg-secondary">
+            <div className="aspect-[3/2] overflow-hidden rounded-md border border-primary bg-secondary">
               {project.image ? (
                 <Halo strength={10}>
                   <Image
@@ -45,15 +45,6 @@ export default function ProjectList({ projects }: ProjectListProps) {
                     className="h-full w-full object-cover"
                   />
                 </Halo>
-              ) : project.coverVideo ? (
-                <video
-                  src={project.coverVideo}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="h-full w-full object-cover"
-                />
               ) : (
                 <div className="flex h-full w-full items-center justify-center">
                   <svg

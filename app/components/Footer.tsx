@@ -32,9 +32,9 @@ const Footer = () => {
 
   const siteMap = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/#about' },
+    { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Visual Feed', href: '/visual-feed' },
+    { name: 'Craft', href: '/#craft' },
   ];
 
   const socialLinks = [
@@ -46,7 +46,7 @@ const Footer = () => {
 
   return (
     <footer className="max-w-[900px] mx-auto mb-16 animate-in p-5 sm:p-4 fade-in-0 duration-300">
-      <div className="bg-secondary rounded-3xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="bg-secondary rounded-lg px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:gap-8 lg:grid-cols-3">
           <div>
             <h3 className="text-sm text-secondary">
