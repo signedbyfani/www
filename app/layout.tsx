@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
 import { geist, geistMono } from "./fonts";
 
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
+import GoogleAnalytics from "@/app/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fanii.lol"),
@@ -32,12 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable} light`}>
       <body className="width-full bg-contrast text-primary antialiased">
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-KQDBP9HPT1" />
         <Navigation />
         <div className="mx-auto max-w-[900px] px-6 pb-24 pt-16 md:px-6 md:pb-24 md:pt-20">
           {children}
         </div>
         <Footer />
-        <Analytics />
       </body>
     </html>
   );

@@ -41,6 +41,7 @@ const Footer = () => {
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/fanindra-m/' },
     { name: 'Behance', href: 'https://www.behance.net/imfanindra' },
     { name: 'Twitter', href: 'https://x.com/signedbyfani' },
+    { name: 'Peerlist', href: 'https://peerlist.io/imfanindra' },
     { name: 'GitHub', href: 'https://github.com/signedbyfani' },
   ];
 
