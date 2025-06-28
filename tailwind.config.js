@@ -19,7 +19,7 @@ module.exports = {
         sans: [
           "-apple-system",
           "BlinkMacSystemFont",
-          'var(--font-geist)',
+          'var(--font-inter)',
           "sans-serif",
         ],
         mono: [

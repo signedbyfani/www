@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { geist, geistMono } from "./fonts";
+import { inter, geistMono } from "./fonts";
 
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} light`}>
+    <html lang="en" className={`${inter.variable} ${geistMono.variable} light`}>
       <body className="width-full bg-contrast text-primary antialiased">
         <GoogleAnalytics GA_MEASUREMENT_ID="G-KQDBP9HPT1" />
         <Navigation />

@@ -1,8 +1,8 @@
 import localFont from 'next/font/local';
 
-export const geist = localFont({
-  src: '../public/Geist.woff2',
-  variable: '--font-geist',
+export const inter = localFont({
+  src: '../public/Inter.woff2',
+  variable: '--font-inter',
   display: 'swap',
 });
 
