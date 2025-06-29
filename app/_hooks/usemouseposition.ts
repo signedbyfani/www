@@ -1,12 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { RefObject } from "react";
 
-export default function useMousePosition(ref = null) {
-  const [mousePosition, setMousePosition] = React.useState({ x: null, y: null });
+interface MousePosition {
+  x: number | null;
+  y: number | null;
+}
+
+export default function useMousePosition(ref?: RefObject<HTMLElement> | null): MousePosition {
+  const [mousePosition, setMousePosition] = React.useState<MousePosition>({ x: null, y: null });
 
   React.useEffect(() => {
-    const updateMousePosition = (ev) => {
+    const updateMousePosition = (ev: MouseEvent) => {
       if (ref?.current) {
         const rect = ref.current.getBoundingClientRect();
         setMousePosition({
@@ -29,4 +34,4 @@ export default function useMousePosition(ref = null) {
   }, [ref]);
 
   return mousePosition;
-}
+} 

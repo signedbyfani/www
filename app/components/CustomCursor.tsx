@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import useMousePosition from "@/app/_hooks/usemouseposition";
 
 export default function CustomCursor() {
@@ -78,11 +79,11 @@ export default function CustomCursor() {
         opacity: { duration: 0.15 },
       }}
     >
-      <img
+      <Image
         src={isPointer ? "/cursors/pointer.svg" : "/cursors/cursor.svg"}
         alt="Cursor"
-        width={12}
-        height={12}
+        width={24}
+        height={24}
         className="w-6 h-6"
       />
     </motion.div>

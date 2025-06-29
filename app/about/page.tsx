@@ -49,7 +49,7 @@ export default function About() {
             <s className="text-tertiary"> Outside of design, I&apos;m usually watching cricket, or watching movies or shows. I enjoy chatting about everything from maps, geo-politics, tech, AI, movies, cricket. Always up for a good conversation.</s> These days though, I&apos;m mostly just designing - work has kind of taken over everything else.
           </p>
           <p>
-            You can also read <Link href="/blog/2025-so-far" underline>my story here</Link> if you'd like to know more about me.</p>
+            You can also read <Link href="/blog/2025-so-far" underline>my story here</Link> if you&apos;d like to know more about me.</p>
 
           <h3 className="font-semibold text-lg">Cheers ✌🏼</h3>
         </div>

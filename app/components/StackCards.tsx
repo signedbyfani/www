@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useTransform, PanInfo } from "framer-motion";
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface CardRotateProps {
@@ -101,9 +102,11 @@ export default function StackCards() {
                 initial={false}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
               >
-                <img
+                <Image
                   src={card.img}
                   alt="card"
+                  width={208}
+                  height={208}
                   className="pointer-events-none h-full w-full rounded-md outline outline-dashed outline-neutral-400 outline-offset-2 object-cover"
                 />
               </motion.div>
