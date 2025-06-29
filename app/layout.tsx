@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
+import CustomCursor from "./components/CustomCursor";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fanii.lol"),
@@ -37,6 +38,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <CustomCursor />
         <Analytics />
       </body>
     </html>

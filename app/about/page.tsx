@@ -3,6 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { ImageSlider } from "@/app/components/ImageSlider";
 import { SkillSlider } from "@/app/components/SkillSlider";
 import Link from "@/app/components/Link";
+import StackCards from "@/app/components/StackCards";
 
 export const metadata: Metadata = {
   title: "About | Fanindra Maharana",
@@ -32,7 +33,7 @@ export default function About() {
         </h1>
       </div>
 
-      {/* Introduction */}
+      <div className="flex flex-col sm:flex-row gap-8 sm:gap-16">
       <div
         className="flex animate-in flex-col gap-8"
         style={{ "--index": 2 } as React.CSSProperties}
@@ -42,19 +43,24 @@ export default function About() {
             Hey, I&apos;m Fanindra Maharana, an Interaction Design student pursuing M. Des at JK Lakshmipat University. I&apos;m into designing smooth and thoughful digital experiences for poeple.
           </h3>
           <p>
-            Funny how things work out, I did B. Tech in CSE (AI & ML), but design caught my interest during my second year of bachelors. I later wanted to pursue it full time.
+            Funny how things work out, I did B. Tech in CSE (AI & ML), but design caught my interest during my second year of bachelors. I later wanted to pursue it full time. I still love to code, but design is where my heart is. Oh! they invented a term for this - <b className="text-accent">vibe-coding</b>.
           </p>
           <p>
             <s className="text-tertiary"> Outside of design, I&apos;m usually watching cricket, or watching movies or shows. I enjoy chatting about everything from maps, geo-politics, tech, AI, movies, cricket. Always up for a good conversation.</s> These days though, I&apos;m mostly just designing - work has kind of taken over everything else.
           </p>
           <p>
-            You can also read <Link href="/blog/2025-so-far" underline>my story here</Link> if you’d like to know more about me.</p>
+            You can also read <Link href="/blog/2025-so-far" underline>my story here</Link> if you'd like to know more about me.</p>
 
           <h3 className="font-semibold text-lg">Cheers ✌🏼</h3>
         </div>
       </div>
+      <div className="flex justify-center">
+            <StackCards />
+          </div>
+      </div>
 
-      {/* Info Cards */}
+
+
       <div
         className="flex animate-in flex-col gap-8"
         style={{ "--index": 3 } as React.CSSProperties}
@@ -73,11 +79,11 @@ export default function About() {
             <p className="my-0 text-primary">Getting 8 hrs of sleep and being productive</p>
           </div>
         </div>
-        <ImageSlider />
-
+        <div className="flex flex-col gap-8">
+          <ImageSlider />
+        </div>
       </div>
 
-      {/* Skills */}
       <div
         className="flex animate-in flex-col gap-4"
         style={{ "--index": 4 } as React.CSSProperties}
@@ -86,7 +92,6 @@ export default function About() {
         <SkillSlider />
       </div>
 
-      {/* Resume Button */}
       <div
         className="animate-in"
         style={{ "--index": 5 } as React.CSSProperties}
