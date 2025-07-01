@@ -53,6 +53,19 @@ export default function About() {
 
           <h3 className="font-semibold text-lg">Cheers ✌🏼</h3>
         </div>
+        <div
+        className="animate-in"
+        style={{ "--index": 2 } as React.CSSProperties}
+      >
+        <a
+          href="/Fanindra_Resume.pdf"
+          target="_blank"
+          className="flex flex-row gap-2 items-center px-4 py-3 bg-accent w-fit text-white font-semibold text-[1.125rem] rounded-lg hover:outline hover:outline-offset-2 outline-accent transition-all duration-100"
+        >
+          Download my resume
+          <ChevronRightIcon className="h-6 w-6 text-white" />
+        </a>
+      </div>
       </div>
       <div className="flex justify-center">
             <StackCards />
@@ -90,20 +103,6 @@ export default function About() {
       >
         <h3>Things I specialize in - </h3>
         <SkillSlider />
-      </div>
-
-      <div
-        className="animate-in"
-        style={{ "--index": 5 } as React.CSSProperties}
-      >
-        <a
-          href="/Fanindra_Resume.pdf"
-          target="_blank"
-          className="flex flex-row gap-2 items-center px-4 py-3 bg-accent w-fit text-white font-semibold text-[1.125rem] rounded-lg hover:opacity-90 transition-all duration-300"
-        >
-          Download my resume
-          <ChevronRightIcon className="h-6 w-6 text-white" />
-        </a>
       </div>
     </div>
   );
