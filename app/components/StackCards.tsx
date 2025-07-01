@@ -107,7 +107,7 @@ export default function StackCards() {
                   alt="card"
                   width={208}
                   height={208}
-                  className="pointer-events-none h-full w-full rounded-md outline outline-dashed outline-neutral-400 outline-offset-2 object-cover"
+                  className="pointer-events-none bg-secondary h-full w-full rounded-md outline outline-dashed outline-neutral-400 outline-offset-2 object-cover"
                 />
               </motion.div>
             </CardRotate>
